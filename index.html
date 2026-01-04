@@ -1,14 +1,14 @@
 <html lang="en-us"><script src="https://pygame-web.github.io/archives/0.9/pythons.js" type=module id=site data-LINES=57 data-CONSOLE=25 data-python=python3.12 data-os=vtx,fs,snd,gui async defer>#<!--
 
 print("""
-Loading test_simple from test_simple.apk
+Loading pygbag_clean_test from pygbag_clean_test.apk
     Pygbag Version : 0.9.2
     Template Version : 0.9.0
     Python  : 3.12
     CDN URL : https://pygame-web.github.io/archives/0.9/
     Screen  : 1280x720
-    Title   : test_simple
-    Folder  : test_simple
+    Title   : pygbag_clean_test
+    Folder  : pygbag_clean_test
     Authors : pgw
     SPDX-License-Identifier: cookiecutter.spdx
 
@@ -84,12 +84,12 @@ async def custom_site():
 
 
 
-    apk = "test_simple.apk"
+    apk = "pygbag_clean_test.apk"
 
-    bundle = "test_simple"
+    bundle = "pygbag_clean_test"
 
     # the C or js loader could do that but be explicit.
-    appdir = Path(f"/data/data/{bundle}") # /data/data/mag_vs_ghosts
+    appdir = Path(f"/data/data/{bundle}") # /data/data/pygbag_clean_test
     appdir.mkdir()
 
 
@@ -142,13 +142,6 @@ async def custom_site():
         await asyncio.sleep(.1)
 
     main = appdir / "assets" / "main.py"
-    
-    print("=" * 80)
-    print(f"DEBUG: main.py path = {main}")
-    print(f"DEBUG: main.py exists = {main.exists()}")
-    if main.exists():
-        print(f"DEBUG: main.py size = {main.stat().st_size}")
-    print("=" * 80)
 
     # start async top level machinery and add a console.
     await TopLevel_async_handler.start_toplevel(platform.shell, console=window.python.config.debug)
@@ -246,7 +239,7 @@ config = {
     user_canvas_managed : 0,
     ume_block : 0,
     can_close : 0,
-    archive : "test_simple",
+    archive : "pygbag_clean_test",
     gui_debug : 3,
     cdn : "https://pygame-web.github.io/archives/0.9/",
     autorun : 1,
@@ -255,7 +248,7 @@ config = {
 
 </script>
 
-    <title>test_simple</title>
+    <title>pygbag_clean_test</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
